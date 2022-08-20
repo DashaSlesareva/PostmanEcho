@@ -7,7 +7,7 @@ import static org.hamcrest.Matchers.equalTo;
 public class PostmanEchoTest {
 
     @Test
-    void test() {
+    void postmanEchoTest() {
         given()
                 .baseUri("https://postman-echo.com")
                 .body("some data")
@@ -15,7 +15,7 @@ public class PostmanEchoTest {
                 .post("/post")
                 .then()
                 .statusCode(200)
-                .body("data", equalTo("some data1"));
+                .body("data", equalTo("some data"));
     }
 }
 
